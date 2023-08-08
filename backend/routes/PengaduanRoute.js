@@ -1,18 +1,18 @@
 import express from "express";
 import {
-    getProducts,
-    getProductById,
-    saveProduct,
-    updateProduct,
-    deleteProduct
+    deletePengaduan,
+    getPengaduan, 
+    getPengaduanById,
+    savePengaduan,
+    updatePengaduan,
 } from "../controllers/PengaduanControllers.js";
 
 const router = express.Router();
 
-router.get('/products', getProducts);
-router.get('/products/:id', getProductById);
-router.post('/products', saveProduct);
-router.patch('/products/:id', updateProduct);
-router.delete('/products/:id', deletePengaduan);
+router.get('/pengaduan', getPengaduan);
+router.get('/pengaduan/:id_pengaduan', getPengaduanById);
+router.post('/pengaduan', savePengaduan);
+router.patch('/pengaduan:id_pengaduan', updatePengaduan);
+router.delete('/pengaduan/:id_pengaduan', deletePengaduan);
 
 export default router;
